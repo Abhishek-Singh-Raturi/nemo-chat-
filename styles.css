@@ -1310,7 +1310,9 @@ body {
 
 /* Chat History Item with Delete */
 .history-item {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 12px;
     color: var(--text-secondary);
     text-decoration: none;
@@ -1320,6 +1322,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .history-item:hover {
