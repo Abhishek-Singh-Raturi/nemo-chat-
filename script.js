@@ -577,12 +577,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modelSelectorBtn')?.addEventListener('click', (e) => {
         e.stopPropagation();
         const menu = document.getElementById('modelDropdownMenu');
-        // Refresh dropdown content before showing
+        const btn = e.currentTarget;
+        const rect = btn.getBoundingClientRect();
         updateModelDropdown();
+        menu.style.bottom = (window.innerHeight - rect.top + 8) + 'px';
+        menu.style.left = rect.left + 'px';
+        menu.style.right = 'auto';
+        menu.style.top = 'auto';
         menu.classList.toggle('active');
     });
-    
-    document.addEventListener('click', (e) => { if (!e.target.closest('.model-dropdown')) document.getElementById('modelDropdownMenu')?.classList.remove('active'); });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.model-dropdown') && !e.target.closest('.model-dropdown-menu')) {
+            document.getElementById('modelDropdownMenu')?.classList.remove('active');
+        }
+    });
 
     // Chat
     chatInput.addEventListener('input', () => { chatInput.style.height = 'auto'; chatInput.style.height = Math.min(chatInput.scrollHeight, 200) + 'px'; });
