@@ -1,4 +1,4 @@
-# 🐠 Nemo Chat
+#  Nemo Chat
 
 > **A modern, feature-rich AI chat interface with a stunning Liquid Glass UI.**
 
