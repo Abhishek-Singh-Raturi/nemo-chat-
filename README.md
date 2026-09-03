@@ -319,5 +319,5 @@ See the `LICENSE` file for more information.
 ---
 
 <p align="center">
-  Made with ❤️ and JavaScript
+  Made with ❤️ 
 </p>
