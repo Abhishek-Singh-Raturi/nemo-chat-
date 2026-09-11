@@ -1,323 +1,136 @@
-#  Nemo Chat
+# Nemo Chat
 
-> **A modern, feature-rich AI chat interface with a stunning Liquid Glass UI.**
+A modern, feature-rich AI chat interface with a stunning liquid glass theme. Built with vanilla HTML, CSS, and JavaScript.
 
-Nemo Chat is a personal AI chat interface built with **Vanilla HTML, CSS, and JavaScript**. It provides a unified and beautiful interface for interacting with multiple AI providers and models from a single application.
+## About
 
-Simply configure your API key, select a provider and model, and start chatting.
+Nemo Chat is a personal AI chat interface that supports multiple AI providers through a single, beautiful UI. Just add your API key and start chatting.
 
----
+## Features
 
-## ✨ Features
+### Multi-Provider Support
+- **OpenAI** - GPT-4, GPT-4o, GPT-3.5 Turbo
+- **OpenRouter** - Access 100+ models from various providers
+- **Google Gemini** - Gemini 1.5 Pro, Gemini 1.5 Flash
+- **Anthropic Claude** - Claude 3.5 Sonnet, Claude 3 Opus
+- **Groq** - Lightning fast inference with Mixtral, Llama
+- **Mistral AI** - Mistral Large, Mistral Small
+- **OpenAI-HK** - Affordable GPT-4 access
 
-### 🤖 Multi-Provider AI Support
+### Themes
+- **Dark** - Classic dark mode
+- **Light** - Clean light mode
+- **Cyber** - Neon cyberpunk vibes
+- **Cherry** - Red and pink tones
+- **Midnight** - Deep blue elegance
+- **Aurora** - Northern lights inspired
+- **Ember** - Warm fire tones
 
-Nemo Chat supports multiple AI providers through one unified interface:
+### Chat Features
+- Real-time streaming responses
+- Code syntax highlighting with one-click copy
+- Copy entire assistant messages
+- Image attachment support
+- Chat history with session management
+- Delete individual chats or clear all history
 
-* **OpenAI** — GPT-4, GPT-4o, GPT-3.5 Turbo
-* **OpenRouter** — Access 100+ AI models
-* **Google Gemini** — Gemini Pro & Flash models
-* **Anthropic Claude** — Claude Sonnet & Opus
-* **Groq** — Fast inference with Llama & Mixtral
-* **Mistral AI** — Mistral Large & Small
-* **OpenAI-HK** — Affordable GPT-4 access
+### UI/UX
+- Liquid glass morphism design
+- Responsive - works on mobile, tablet, and desktop
+- Smooth animations and transitions
+- Custom API profiles with editable settings
+- Model selection per provider
+- Blinking Nemo avatar with mouse-tracking eyes
 
-### 🎨 Multiple Themes
+## Screenshots
 
-Choose the visual style that fits you:
+Coming soon...
 
-* 🌑 Dark
-* ☀️ Light
-* ⚡ Cyber
-* 🍒 Cherry
-* 🌌 Midnight
-* 🌈 Aurora
-* 🔥 Ember
-
-### 💬 Powerful Chat Features
-
-* ⚡ Real-time streaming responses
-* 🧑‍💻 Code syntax highlighting
-* 📋 One-click code copying
-* 📄 Copy complete assistant messages
-* 🖼️ Image attachment support
-* 💾 Persistent chat history
-* 🗂️ Session management
-* 🗑️ Delete individual conversations
-* 🧹 Clear complete chat history
-* 🆕 Create new conversations
-
-### 🪟 Modern UI/UX
-
-* 💎 Liquid Glass / Glassmorphism interface
-* 📱 Fully responsive design
-* 🖥️ Desktop, tablet and mobile support
-* ✨ Smooth animations and transitions
-* ⚙️ Custom API profiles
-* 🎯 Model selection per provider
-* 👀 Animated Nemo avatar
-* 🖱️ Mouse-tracking eyes
-
----
-
-## 🖼️ Preview
-
-> Add screenshots of your application here.
-
-```text
-┌──────────────────────────────────────────────┐
-│                  Nemo Chat                   │
-│                                              │
-│        Your modern AI conversation UI        │
-│                                              │
-│     💬 Chat       🤖 AI       ⚙️ Settings    │
-└──────────────────────────────────────────────┘
-```
-
-You can replace the above placeholder with:
-
-```markdown
-![Nemo Chat Preview](screenshots/preview.png)
-```
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
+- A modern web browser (Chrome, Firefox, Edge, Safari)
+- An API key from any supported provider
 
-Before running Nemo Chat, make sure you have:
+### Installation
 
-* A modern web browser
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abhishek-Singh-Raturi/nemo-chat-.git
+   ```
 
-  * Google Chrome
-  * Mozilla Firefox
-  * Microsoft Edge
-  * Safari
-* An API key from one of the supported AI providers
+2. Open `index.html` in your browser
 
-No Node.js, Python, npm, or backend server is required.
+3. Click the Settings icon → API Settings
 
----
+4. Add your API profile:
+   - Profile Name
+   - API Provider
+   - API Key
+   - System Prompt (optional)
 
-## 📥 Installation
+5. Start chatting!
 
-### 1. Clone the Repository
+### Usage
 
-```bash
-git clone https://github.com/Abhishek-Singh-Raturi/nemo-chat-.git
+1. Type your message in the input field
+2. Press Enter or click the Send button
+3. Use the paperclip icon to attach images
+4. Click "New Chat" to start a fresh conversation
+5. Access chat history from the sidebar
+
+## Project Structure
+
 ```
-
-### 2. Open the Project
-
-```bash
-cd nemo-chat-
-```
-
-### 3. Launch Nemo Chat
-
-Open:
-
-```text
-index.html
-```
-
-in your preferred browser.
-
-### 4. Configure Your API
-
-Go to:
-
-**Settings → API Settings**
-
-Create a new API profile with:
-
-* Profile Name
-* AI Provider
-* API Key
-* Model
-* System Prompt *(optional)*
-
-### 5. Start Chatting 🚀
-
-Select your provider and model, enter your message, and start your conversation.
-
----
-
-## 💡 Usage
-
-### Start a Conversation
-
-1. Enter your message in the chat input.
-2. Press **Enter** or click **Send**.
-3. Wait for the AI response.
-
-### Attach Images
-
-Use the **📎 attachment button** to upload supported images.
-
-### Create a New Chat
-
-Click **New Chat** to start a fresh conversation.
-
-### Access Chat History
-
-Open the sidebar to view and manage your previous conversations.
-
-### Switch AI Models
-
-Use the model selector to change the AI model used for your conversation.
-
----
-
-## 📁 Project Structure
-
-```text
 nemo-chat-/
-│
-├── index.html      # Main application interface
-├── styles.css      # UI styling and themes
-├── script.js       # Application logic
-├── README.md       # Project documentation
-│
-└── screenshots/    # Application screenshots
+├── index.html      # Main HTML file
+├── styles.css      # All styles and themes
+├── script.js       # All JavaScript logic
+└── README.md       # This file
 ```
 
----
+## Built With
 
-## 🛠️ Built With
+- HTML5
+- CSS3 (Custom Properties, Flexbox, Grid)
+- Vanilla JavaScript (ES6+)
 
-| Technology            | Purpose                      |
-| --------------------- | ---------------------------- |
-| HTML5                 | Application structure        |
-| CSS3                  | Styling, animations & themes |
-| JavaScript ES6+       | Application logic            |
-| CSS Custom Properties | Dynamic themes               |
-| Flexbox               | UI layouts                   |
-| CSS Grid              | Responsive layouts           |
+## Future Plans
 
-No framework required — **100% Vanilla JavaScript**.
+- [ ] Voice input support
+- [ ] Export chat as PDF/Markdown
+- [ ] Chat folder organization
+- [ ] Keyboard shortcuts
+- [ ] Pin important messages
+- [ ] Search within chats
+- [ ] Dark/Light mode auto-switch based on system
+- [ ] Plugin system for custom tools
+- [ ] Multi-language support
+- [ ] Chat sharing via link
+- [ ] Custom avatar upload
+- [ ] Response speed settings
+- [ ] Token counter display
+- [ ] Conversation summaries
 
----
+## Known Issues
 
-## 🔐 API Keys & Security
+- None reported yet
 
-Nemo Chat is a frontend application, so API keys are configured on the client side.
+## Contributing
 
-**Important:** Never expose production API keys in publicly accessible frontend code.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-For production deployments, consider implementing:
+## Author
 
-* A secure backend proxy
-* Environment variables
-* Server-side API requests
-* Authentication
-* Rate limiting
+**Abhishek Singh Raturi**
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhishek-Singh-Raturi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abhi-rtr)
 
-## 🗺️ Roadmap
+## Show Your Support
 
-Future improvements planned for Nemo Chat:
+Give a ⭐ if you like this project!
 
-### 🎙️ Voice & Accessibility
+## License
 
-* [ ] Voice input
-* [ ] Voice output
-* [ ] Custom voice settings
-* [ ] Improved keyboard accessibility
-
-### 📂 Chat Management
-
-* [ ] Chat folders
-* [ ] Search within conversations
-* [ ] Pin important messages
-* [ ] Chat tagging
-* [ ] Conversation summaries
-
-### 📤 Export & Sharing
-
-* [ ] Export conversations as PDF
-* [ ] Export conversations as Markdown
-* [ ] Share conversations through links
-* [ ] Import/export chat history
-
-### ⚙️ Advanced Features
-
-* [ ] Keyboard shortcuts
-* [ ] System-based automatic theme switching
-* [ ] Plugin system
-* [ ] Custom tools
-* [ ] Token counter
-* [ ] Response speed controls
-* [ ] Custom avatar uploads
-
-### 🌍 Internationalization
-
-* [ ] Multi-language interface
-* [ ] Language-specific AI settings
-* [ ] RTL language support
-
----
-
-## 🌟 Why Nemo Chat?
-
-Nemo Chat is designed to provide a **simple but powerful alternative to traditional AI chat interfaces**.
-
-Instead of switching between different AI platforms, Nemo Chat aims to provide:
-
-```text
-One Interface
-      ↓
-Multiple Providers
-      ↓
-Multiple Models
-      ↓
-One Unified Experience
-```
-
----
-
-## 👨‍💻 Author
-
-### Abhishek Singh Raturi
-
-B.Tech Artificial Intelligence & Machine Learning Student
-
-Interested in:
-
-* 🤖 Artificial Intelligence
-* 🧠 Machine Learning
-* ✨ Generative AI
-* 🔧 Prompt Engineering
-* 💻 AI Application Development
-
-### Connect With Me
-
-**GitHub:**
-https://github.com/Abhishek-Singh-Raturi
-
-**LinkedIn:**
-https://linkedin.com/in/abhi-rtr
-
----
-
-## ⭐ Show Your Support
-
-If you like **Nemo Chat**, consider giving the repository a ⭐ on GitHub.
-
-Your support helps motivate further development!
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more information.
-
----
-
-<p align="center">
-  Made with ❤️ 
-</p>
+This project is licensed under the MIT License - see the LICENSE file for details.

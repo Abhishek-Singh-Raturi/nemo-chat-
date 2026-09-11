@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderProfiles() {
         const list = document.getElementById('profilesList');
         if (!profiles.length) {
-            profiles.push({ id: Date.now().toString(), name: 'My API', provider: 'openai', apiKey: '', models: [{ id: 'gpt-4o', name: 'GPT-4o', description: 'Most capable' }], customUrl: '', systemPrompt: 'You are Nemo, a friendly AI assistant created to help users. Always respond as Nemo. Never say you are created by OpenAI, Google, Anthropic, or any other company. Your name is Nemo and you were built to assist people with tasks, answer questions, and have conversations. Keep responses concise and helpful.' });
+            profiles.push({ id: Date.now().toString(), name: 'My API', provider: 'openai', apiKey: '', models: [{ id: 'gpt-4o', name: 'GPT-4o', description: 'Most capable' }], customUrl: '', systemPrompt: 'Your name is Nemo. You are an AI assistant. You must ALWAYS respond as Nemo. NEVER say you are GPT, Claude, Gemini, Llama, or any other model. If asked your name, say "Nemo". If asked who created you, say "I am Nemo, created to help you." Never mention OpenAI, Google, Anthropic, Meta, or any company. Keep responses concise and helpful.' });
             saveProfiles();
         }
         if (!currentProfileId || !profiles.find(p => p.id === currentProfileId)) {
@@ -282,10 +282,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'gemma2-9b-it', name: 'Gemma 2 9B', desc: 'Lightweight & fast' }
         ],
         openrouter: [
-            { id: 'openai/gpt-4o', name: 'GPT-4o (OpenRouter)', desc: 'Via OpenRouter' },
-            { id: 'anthropic/claude-sonnet-4-20250514', name: 'Claude Sonnet 4 (OR)', desc: 'Via OpenRouter' },
-            { id: 'meta-llama/llama-3.3-70b-versatile', name: 'Llama 3.3 (OR)', desc: 'Via OpenRouter' },
-            { id: 'google/gemini-2.0-flash', name: 'Gemini 2.0 (OR)', desc: 'Via OpenRouter' }
+            { id: 'meta-llama/llama-3.1-8b-instruct:free', name: 'Llama 3.1 8B (Free)', desc: 'Free - Meta Llama' },
+            { id: 'google/gemma-2-9b-it:free', name: 'Gemma 2 9B (Free)', desc: 'Free - Google' },
+            { id: 'mistralai/mistral-7b-instruct:free', name: 'Mistral 7B (Free)', desc: 'Free - Mistral' },
+            { id: 'qwen/qwen-2-7b-instruct:free', name: 'Qwen 2 7B (Free)', desc: 'Free - Qwen' },
+            { id: 'huggingfaceh4/zephyr-7b-beta:free', name: 'Zephyr 7B (Free)', desc: 'Free - HuggingFace' }
         ]
     };
 
@@ -580,10 +581,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = e.currentTarget;
         const rect = btn.getBoundingClientRect();
         updateModelDropdown();
-        menu.style.bottom = (window.innerHeight - rect.top + 8) + 'px';
-        menu.style.left = rect.left + 'px';
+        
+        // Position menu below the button
+        let topPos = rect.bottom + 8;
+        let leftPos = rect.left;
+        
+        // Check if menu would go off-screen vertically
+        if (topPos + 320 > window.innerHeight) {
+            topPos = rect.top - 8 - 320; // Show above button
+        }
+        
+        // Check if menu would go off-screen horizontally
+        if (leftPos + 240 > window.innerWidth) {
+            leftPos = window.innerWidth - 240 - 16;
+        }
+        
+        menu.style.top = topPos + 'px';
+        menu.style.left = leftPos + 'px';
+        menu.style.bottom = 'auto';
         menu.style.right = 'auto';
-        menu.style.top = 'auto';
         menu.classList.toggle('active');
     });
 
@@ -711,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         am.push({ role: m.role, content: m.content });
                     }
                 });
-                body = { model: selectedModel, messages: am, max_tokens: 1024, temperature: 0.7 };
+                body = { model: selectedModel, messages: am, max_tokens: 512, temperature: 0.7 };
                 
                 response = await fetch(baseUrl, { method: 'POST', headers, body: JSON.stringify(body) });
             }
